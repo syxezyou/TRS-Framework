@@ -1,0 +1,17 @@
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+sv_hostname "TRS Roleplay"
+sets sv_projectName "TRS Framework"
+sets sv_projectDesc "Serveur RP autonome"
+sv_maxclients 48
+set onesync on
+sv_licenseKey "CHANGE_ME"
+set mysql_connection_string "mysql://USER:PASSWORD@127.0.0.1/DATABASE?charset=utf8mb4"
+add_ace group.admin trs.admin allow
+# add_principal identifier.license:VOTRE_LICENSE group.admin
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure oxmysql
+ensure trs
